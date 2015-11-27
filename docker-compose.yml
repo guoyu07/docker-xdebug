@@ -1,0 +1,14 @@
+php:
+  image: joanfont/php:5.6-fpm
+  volumes:
+    - "./src:/code"
+  expose:
+    - 9090
+web:
+  image: joanfont/nginx
+  volumes:
+    - "./src:/code/"
+  links:
+    - php
+  ports:
+    - "80:80"

@@ -1,5 +1,4 @@
 <?php
-
 function factorial($n)
 {
     if ($n == 0) {
@@ -8,6 +7,5 @@ function factorial($n)
         return $n * factorial($n - 1);
     }
 }
-
 $f10 = factorial(10);
-echo sprintf("factorial(6) = %d\n", $f10);
+echo sprintf("factorial(10) = %d\n", $f10);
